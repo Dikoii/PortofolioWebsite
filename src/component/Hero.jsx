@@ -29,7 +29,7 @@ const Hero = () => {
               variants={container(0.3)}
               initial="hidden"
               animate="visible"
-              className="text-4xl lg:text-6xl font-bold tracking-tight"
+              className="text-3xl lg:text-6xl font-bold tracking-tight"
             >
               Dicky Dharma Susanto
             </motion.h1>
@@ -39,7 +39,7 @@ const Hero = () => {
               animate="visible"
               className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl lg:text-4xl tracking-tight text-transparent"
             >
-              Full Stack Developer
+              Software Engineer
             </motion.span>
             <motion.p
               variants={container(0.7)}
