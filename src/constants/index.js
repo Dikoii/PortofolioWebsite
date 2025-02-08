@@ -100,14 +100,14 @@ export const PROJECTS = [
     github: 'https://github.com/Dikoii/EduFun',
     image: project8,
     description: 'EduFun is an educational website developed by PT. EduFun, aimed at providing free IT course content to university students. The platform focuses on delivering high-quality learning materials in various fields, specifically Data Science, Interactive Multimedia, Network Security, and Software Engineering',
-    technologies: ['Laravel', 'Javascript', 'Bootstrap'],
+    technologies: ['Laravel', 'Javascript', 'Bootstrap', 'MySQL'],
   },
   {
     title: 'ConnectFriend',
     github: 'https://github.com/Dikoii/FinalASGWebProg-2602072275-Dicky-Dharma-Susanto',
     image: project9,
     description: 'ConnectFriend is a social networking site that allows users to communicate with other members, as well as share content and online media with those members. You as a ConnectFriend programmer are asked to create a web application using the concept of social networking to meet new friends',
-    technologies: ['Laravel', 'Javascript', 'Bootstrap'],
+    technologies: ['Laravel', 'Javascript', 'Bootstrap', 'MySQL'],
   },
   {
     title: 'Calouself',

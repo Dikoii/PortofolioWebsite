@@ -7,7 +7,7 @@ import Technologies from './component/Technologies';
 import Experience from './component/Experience';
 import Projects from './component/Projects';
 import Contacts from './component/Contacts';
-import Footer from './component/Footer';
+import Footer from './component/Footer'; 
 
 const App = () => {
   return (
