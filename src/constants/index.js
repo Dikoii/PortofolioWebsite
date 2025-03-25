@@ -17,23 +17,23 @@ export const ABOUT_TEXT = `I am an undergraduate student majoring in Computer Sc
 
 export const EXPERIENCES = [
   {
-    year: 'March 2025 - December 2025',
+    year: 'March 2025 - Present',
     role: 'IOS Developer',
     company: 'Apple Developer Academy',
     description: `The Apple Developer Academy @BINUS is Asia’s first ever initiative to empower Indonesia’s economy by creating world-class developers for the world’s most innovative and vibrant app ecosystem. The 9-month academy program aims to attract students 18+ across Indonesia from a wide range of backgrounds. Our curriculum is designed to support not only those with coding or computer science experience but also those interested in areas such as design and business. It challenges students to apply themselves in real-world issues via application design, development, and startup creation. It also emphasizes creativity and collaboration which are skills needed for success. This program will be delivered in both Bahasa Indonesia and English.`,
-    technologies: ['Swift', 'SQL', 'OOP', 'Creativity', 'Collaboration'],
+    technologies: ['Swift', 'SwiftUI', 'UIkit', 'Creativity', 'Collaboration'],
   },
   {
     year: 'March 2023 - July 2023',
     role: 'Technical Comitee HISHOT',
-    company: 'HIMTI',
+    company: 'HIMTI Binus University',
     description: `As a designated committee member within the Technical Division of HISHOT (HIMTI Seminar, Workshop, and Study Tour) at BINUS University's HIMTI, I hold the responsibility for overseeing the technical facets and ensuring smooth coordination for the effective implementation of seminars and workshops.`,
     technologies: ['Communication', 'Event Coordination', 'Event Planning', 'Technical Support'],
   },
   {
-    year: 'August 2022 - Present',
-    role: 'Activist',
-    company: 'HIMTI',
+    year: 'February 2023 - March 2024',
+    role: 'Programming Class Activist',
+    company: 'HIMTI Binus University',
     description: `As an activist in the Programming Class division at HIMTI Binus University, I assumed a central role in cultivating and honing the talents of aspiring programmers. Our division was dedicated to equipping participants with advanced coding skills and cultivating a dynamic community of passionate learners.`,
     technologies: ['Communication', 'Technical Support', 'Event Planning'],
   },

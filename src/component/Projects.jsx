@@ -14,7 +14,7 @@ const Projects = () => {
       </motion.h2>
       <div>
         {displayedProjects.map((project, index) => (
-          <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+          <div key={index} className="mb-8 flex flex-wrap lg:justify-center lg:gap-8">
             <motion.div whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -100 }} transition={{ duration: 1 }} className="w-full lg:w-1/4">
               <img src={project.image} width={300} height={300} alt={project.title} className="mb-6 rounded" />
             </motion.div>
