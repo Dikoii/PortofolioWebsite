@@ -1,6 +1,7 @@
 import { HERO_CONTENT } from '../constants';
-import profilePic from '../assets/Profile.png';
+import profilePic from '../assets/Profile.jpg';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 const container = (delay) => ({
   hidden: { x: -100, opacity: 0 },
@@ -12,6 +13,38 @@ const container = (delay) => ({
 });
 
 const Hero = () => {
+  const [displayedText, setDisplayedText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [typingSpeed, setTypingSpeed] = useState(100);
+  
+  const fullName = "Dicky Dharma Susanto";
+  
+  useEffect(() => {
+    let timeout;
+    
+    const handleType = () => {
+      if (!isDeleting && displayedText.length < fullName.length) {
+        // Typing forward
+        setDisplayedText(fullName.substring(0, displayedText.length + 1));
+        setTypingSpeed(Math.random() * 100 + 50);
+      } else if (!isDeleting && displayedText === fullName) {
+        // Finished typing, wait then start deleting
+        timeout = setTimeout(() => setIsDeleting(true), 2500);
+        return;
+      } else if (isDeleting && displayedText.length > 0) {
+        // Deleting backward
+        setDisplayedText(fullName.substring(0, displayedText.length - 1));
+        setTypingSpeed(50); // Faster deletion
+      } else if (isDeleting && displayedText === '') {
+        // Finished deleting, start typing again
+        setIsDeleting(false);
+        setTypingSpeed(100);
+      }
+    };
+    timeout = setTimeout(handleType, typingSpeed);
+    return () => clearTimeout(timeout);
+  }, [displayedText, isDeleting, typingSpeed]);
+
   return (
     <div className="mt-20 border-b border-neutral-900 pb-4 lg:mb-35" id="home">
       <div className="flex flex-wrap items-center">
@@ -25,14 +58,17 @@ const Hero = () => {
             >
               Hello, I'm
             </motion.h1>
-            <motion.h1
+            <motion.div
               variants={container(0.3)}
               initial="hidden"
               animate="visible"
-              className="text-3xl lg:text-6xl font-bold tracking-tight"
+              className="text-3xl lg:text-6xl font-bold tracking-tight min-h-[1.2em] flex items-center"
             >
-              Dicky Dharma Susanto
-            </motion.h1>
+              <span className="text-white">
+                {displayedText}
+                <span className="inline-block w-1 h-8 lg:h-12 bg-pink-300 animate-pulse"></span>
+              </span>
+            </motion.div>
             <motion.span
               variants={container(0.5)}
               initial="hidden"
